@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game Page</title>
+   <!--  Bootstap framework -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+    <link rel="stylesheet" href="./src/css/main.css">
+
+</head>
+<body>
+    <!-- navbar -->
+    <!-- this snippt taken from https://hackerthemes.com/bootstrap-cheatsheet/#navbar-toggleable-xs -->
+                            <!--     telah diubah sesuai kebutuhan -->
+    <nav class="navbar navbar-fixed-top bg-faded">
+      <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">
+         &#9776;
+      </button>
+      <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
+        <a class="navbar-brand" href="#">Card Game</a>
+        <ul class="nav navbar-nav">
+          <li class="nav-item logout pull-xs-right">
+            <button class="item-login btn btn-sm" data-toggle="modal" data-target="#myModal" ></button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+<!--     this snippet taken from https://hackerthemes.com/bootstrap-cheatsheet/#modal-sm
+                             telah diubah sesuai kebutuhan -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel7" aria-hidden="true">
+      <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+        <h3>Are you sure want to logout?</h3>
+        <button type="button" id="no-btn" class="btn btn-primary btn-sm">No</button>
+        <button type="button" id="yes-btn" class="btn btn-primary btn-sm">Yes</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+        <section class="row field-r">
+            <div class="field col-md-8">
+                <div id="one" class="card"></div>
+                <div id="two" class="card"></div>
+                <div id="three" class="card"></div>
+                <div id="four" class="card"></div>
+                <div id="five" class="card"></div>
+                <div id="six" class="card"></div>
+                <div id="seven" class="card"></div>
+                <div id="eight" class="card"></div>
+                <div id="nine" class="card"></div>
+                <div id="ten" class="card"></div>
+                <div id="eleven" class="card"></div>
+                <div id="twelve" class="card"></div>
+                <div id="thirteen" class="card"></div>
+                <div id="fourteen" class="card"></div>
+                <div id="fiveteen" class="card"></div>
+                <div id="sixteen" class="card"></div>
+            </div>
+        </section>
+        <section class="row">
+            <div class="col-md-6">Timer</div>
+            <div class="col-md-6"><button id="newGame" type="button">Click</button></div>
+        </section>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="./src/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous">
+    </script>
+
+
+</body>
+</html>
