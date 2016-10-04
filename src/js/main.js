@@ -3,7 +3,10 @@ $(document).ready(function() {
     var gambar = ["gambar1","gambar2","gambar3","gambar4","gambar5","gambar6","gambar7","gambar8","gambar1","gambar2","gambar3","gambar4","gambar5","gambar6","gambar7","gambar8"];
     var panjang = $('.field div').length;
     var kartu = $('.field').children();
+    var point = 0;
+    var winGame = 8;
     var unique = [];
+    var card = $('.field .card');
     var numRandom = 16;
 
         /* Act on the event */
@@ -25,13 +28,19 @@ $(document).ready(function() {
         });
 
 
-
+        // Shuffle card randomly
         $('#newGame').click(function(event) {
             /* Act on the event */
+            var data;
             kartu.each(function() {
                var j = makeUniqueRandom();
+               if(j < 8){
+                data = j;
+               } else {
+                data = j-8;
+               }
                 console.log(j);
-                $(this).html('<img src="./src/images/'+gambar[j]+'.svg" alt="' +gambar[j] + '" > </img>');
+                $(this).html('<img src="./src/images/'+gambar[j]+'.svg" alt="' +gambar[j] + '" data ="'+ data + '" > </img>');
             });
 
             console.log(unique);
@@ -56,6 +65,41 @@ $(document).ready(function() {
              unique.splice(index,1);
 
              return val;
+        }
+
+        // this code was insipired by http://jsbin.com/xaket/3/edit?html,css,js,output
+        card.click(function(event) {
+            /* Act on the event */
+            if($(this).hasClass('sama')) {
+                return ;
+            }
+
+            $(this).toggleClass('flipped');
+
+            var diffCard = getBeda();
+
+            if(diffCard.length === 2){
+                var first = diffCard.first().children('img');
+                var second = diffCard.last().children('img');
+                var attrFirst = getData(first);
+                var attrSecond = getData(second);
+
+                console.log(attrFirst + " " + attrSecond);
+
+            }
+
+
+        });
+
+        function getData(obj){
+            var data = obj.attr('data');
+            return data;
+        }
+
+        function getBeda(){
+            var val = $('.flipped').not('.sama');
+
+            return val;
         }
 });
 
