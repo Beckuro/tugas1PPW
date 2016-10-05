@@ -38,6 +38,23 @@
       </div>
     </div>
 
+    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel7" aria-hidden="true">
+      <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+        <h3>Congratulations , you're winning this game. Wanna play again? </h3>
+        <button type="button" id="no-btn-1" class="btn btn-primary btn-sm">No</button>
+        <button type="button" id="yes-btn-1" class="btn btn-primary btn-sm">Yes</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="overlay">
+    <div class="warning">
+        <h1> You must click the 'Start' button before starting a game</h1>
+    </div>
+    </div>
     <div class="container">
         <section class="row field-r">
             <div class="field col-md-8">
@@ -58,10 +75,56 @@
                 <div id="fiveteen" class="card"></div>
                 <div id="sixteen" class="card"></div>
             </div>
+            <div class="col-md-4 ">
+            <h1>Leader Board</h1>
+                <table class="tbl table table-responsive">
+                  <thead class="thead-inverse">
+                    <tr>
+                      <th>Rangking</th>
+                      <th>Username</th>
+                      <th>Time</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td id="name1">Null</td>
+                      <td id="time1">NaN</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td id="name2">Null</td>
+                      <td id="time2">NaN</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td id="name3">Null</td>
+                      <td id="time3">NaN</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4</th>
+                      <td id="name4">Null</td>
+                      <td id="time4">NaN</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">5</th>
+                      <td id="name5">Null</td>
+                      <td id="time5">NaN</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <button id="clearItem" type="button" class="btn btn-danger button-clear">Reset</button>
+            </div>
         </section>
         <section class="row">
-            <div class="col-md-6">Timer</div>
-            <div class="col-md-6"><button id="newGame" type="button">Click</button></div>
+            <div class="timer col-md-6" isRunning="false">
+                <div class="time">
+                    <span id="minutes">00</span>:
+                    <span id="second">00</span>:
+                    <span id="ms">00</span>
+                </div>
+            </div>
+            <div class="col-md-6"><button id="newGame" type="button" class="btn btn-danger btn-lg">Start</button></div>
         </section>
     </div>
 
