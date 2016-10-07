@@ -55,6 +55,10 @@
         <h1> You must click the 'Start' button before starting a game</h1>
     </div>
     </div>
+
+    <div id="loading" class="overlay-white">
+        <img class="loading-scr" src='./src/images/default.gif'/>
+    </div>
     <div class="container">
         <section class="row field-r">
             <div class="field col-md-8">
@@ -111,9 +115,13 @@
                       <td id="name5">Null</td>
                       <td id="time5">NaN</td>
                     </tr>
+                    <tr>
+                      <th scope="row"></th>
+                      <td></td>
+                      <td><button id="clearItem" type="button" class="btn btn-danger button-clear">Reset</button></td>
+                    </tr>
                   </tbody>
                 </table>
-                <button id="clearItem" type="button" class="btn btn-danger button-clear">Reset</button>
             </div>
         </section>
         <section class="row">
